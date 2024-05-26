@@ -13,7 +13,7 @@ boolean start, win;
 
 
 
-PFont font;
+
 
 void setup() {
   win = false;
