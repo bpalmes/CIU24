@@ -26,8 +26,7 @@ void setup() {
   planet1 = new Planet(width / 2, height / 2, 300, 30, 0.01);
   planet2 = new Planet(width / 2, height / 2, 350, 40, -0.01);
   
-  myShader = loadShader("simple.frag", "simple.vert");
-  myShader.set("resolution", float(width), float(height));
+  
   
   // Inicializar enemigos
   resetEnemies();
@@ -67,8 +66,7 @@ void draw() {
     b.display();
   }
   
-  shader(myShader);
-  myShader.set("time", millis() / 1000.0);
+  
   
   for (Enemy e : enemies) {
     e.move();
@@ -78,7 +76,7 @@ void draw() {
     }
   }
   
-  resetShader();
+  
   
   // Control del jugador
   if (keyPressed) {
