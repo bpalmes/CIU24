@@ -1,6 +1,0 @@
-name = CVImage
-
-application.macosx=CVImage.jar,opencv-440.jar,libopencv_java440.dylib
-application.windows64=CVImage.jar,opencv-440.jar,opencv_java440.dll
-
-
