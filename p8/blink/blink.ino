@@ -10,7 +10,7 @@ void setup() {
 
 void loop() {
   // Calcula el tiempo actual
-  unsigned long currentTime = millis();
+  unsigned long currentTime = millis(); //Tiempo en milisegundos desde que el programa empieza a ejecutarse
   
   // Calcula la fase de la señal senoidal
   float phase = (2 * PI * currentTime) / period;
@@ -18,7 +18,7 @@ void loop() {
   // Calcula la frecuencia actual basada en la señal senoidal
   float currentFreq = freqMin + (sin(phase) + 1) / 2 * (freqMax - freqMin);
   
-  // Calcula el periodo de parpadeo en función de la frecuencia actual
+  // Calcula el periodo de parpadeo en función de la frecuencia actual (La frecuencia es la inversa del periodo)
   float blinkPeriod = 1000.0 / currentFreq;
   
   // Enciende y apaga el LED según el periodo de parpadeo

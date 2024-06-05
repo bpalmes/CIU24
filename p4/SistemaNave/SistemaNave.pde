@@ -194,25 +194,25 @@ void updateShipVectors() {
 
 void actualizarCamara() { // cambiar el valor para aumentar la velocidad
   if (w) {
-    navePos.add(PVector.mult(dir, 300));
+    navePos.add(PVector.mult(dir, 1));
   }
   
   if (s) {
-    navePos.sub(PVector.mult(dir, 300));
+    navePos.sub(PVector.mult(dir, 1));
   }
   
   if (a) {
     PVector producto = new PVector();
     PVector.cross(dir, up, producto);
     producto.normalize();
-    navePos.sub(PVector.mult(producto,300));
+    navePos.sub(PVector.mult(producto,1));
   }
   
   if (d) {
     PVector producto = new PVector();
     PVector.cross(dir, up, producto);
     producto.normalize();
-    navePos.add(PVector.mult(producto, 300));
+    navePos.add(PVector.mult(producto, 1));
   }
   
   if (arriba) {
